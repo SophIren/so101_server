@@ -1,0 +1,243 @@
+Auto-resume enabled. Using config_path=/opt/so101/train_smoke/primer19_bag_20261027/checkpoints/last/pretrained_model/train_config.json and resume=True.
+[SO101 resume] Loading original base /opt/so101/models/so101-pi05-base before restoring adapters/optimizer
+INFO 2026-10-27 22:50:52 sh/train.py:438 {'batch_size': 5,
+ 'checkpoint_path': '/opt/so101/train_smoke/primer19_bag_20261027/checkpoints/last',
+ 'dataset': {'episodes': [0, 1, 2],
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'PriMeR19/SO-101-teleop',
+             'revision': None,
+             'root': '/opt/so101/tests/primer19_smoke_train_v21',
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec'},
+ 'env': None,
+ 'eval': {'batch_size': 50, 'n_episodes': 50, 'use_async_envs': False},
+ 'eval_freq': 20000,
+ 'grad_accum_steps': 2,
+ 'job_name': 'primer19_bag_lora',
+ 'log_freq': 1,
+ 'lora': {'alpha': 16,
+          'backend': 'peft',
+          'dropout': 0.0,
+          'enable': True,
+          'extra_trainable_modules': ['action_in_proj',
+                                      'action_out_proj',
+                                      'time_mlp_in',
+                                      'time_mlp_out',
+                                      'state_proj',
+                                      'state_mlp_in',
+                                      'state_mlp_out',
+                                      'embeddings',
+                                      'input_layernorm',
+                                      'post_attention_layernorm'],
+          'qlora_compute_dtype': 'bfloat16',
+          'qlora_quant_type': 'nf4',
+          'r': 16,
+          'target_modules': ['q_proj',
+                             'k_proj',
+                             'v_proj',
+                             'o_proj',
+                             'gate_proj',
+                             'up_proj',
+                             'down_proj',
+                             'out_proj',
+                             'fc1',
+                             'fc2'],
+          'use_qlora': False},
+ 'max_delay_steps': 0,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.95],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 5e-05,
+               'type': 'adamw',
+               'weight_decay': 1e-10},
+ 'output_dir': '/opt/so101/train_smoke/primer19_bag_20261027',
+ 'policy': {'action_expert_config': {},
+            'action_expert_variant': 'gemma_300m',
+            'chunk_size': 50,
+            'compile_mode': 'max-autotune',
+            'compile_model': False,
+            'device': 'cuda',
+            'dtype': 'bfloat16',
+            'empty_cameras': 1,
+            'fuse_gate_up': False,
+            'fuse_qkv': False,
+            'gradient_checkpointing': False,
+            'image_resolution': [224, 224],
+            'input_features': {'observation.images.base_0_rgb': {'shape': [3,
+                                                                           480,
+                                                                           640],
+                                                                 'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.left_wrist_0_rgb': {'shape': [3,
+                                                                                 480,
+                                                                                 640],
+                                                                       'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.right_wrist_0_rgb': {'shape': [3,
+                                                                                  480,
+                                                                                  640],
+                                                                        'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [6],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'license': None,
+            'max_action_dim': 32,
+            'max_period': 4.0,
+            'max_state_dim': 32,
+            'min_period': 0.004,
+            'n_action_steps': 50,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>},
+            'num_inference_steps': 10,
+            'optimizer_betas': [0.9, 0.95],
+            'optimizer_eps': 1e-08,
+            'optimizer_grad_clip_norm': 1.0,
+            'optimizer_lr': 2.5e-05,
+            'optimizer_weight_decay': 0.01,
+            'output_features': {'action': {'shape': [6],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'paligemma_variant': 'gemma_2b',
+            'pretrained_path': '/opt/so101/models/so101-pi05-base',
+            'private': None,
+            'push_to_hub': False,
+            'repo_id': None,
+            'scheduler_decay_lr': 2.5e-06,
+            'scheduler_decay_steps': 30000,
+            'scheduler_warmup_steps': 1000,
+            'state_cond': True,
+            'tags': None,
+            'time_sampling_beta_alpha': 1.5,
+            'time_sampling_beta_beta': 1.0,
+            'time_sampling_offset': 0.001,
+            'time_sampling_scale': 0.999,
+            'tokenizer_max_length': 200,
+            'type': 'pi05',
+            'use_amp': False,
+            'vlm_config': {}},
+ 'rename_map': {},
+ 'resume': True,
+ 'save_checkpoint': True,
+ 'save_freq': 21,
+ 'scheduler': {'decay_lr': 2.5e-06,
+               'num_decay_steps': 20,
+               'num_warmup_steps': 2,
+               'peak_lr': 5e-05,
+               'type': 'cosine_decay_with_warmup'},
+ 'seed': 1000,
+ 'shared_observation': False,
+ 'steps': 21,
+ 'use_policy_training_preset': False,
+ 'wandb': {'disable_artifact': True,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'so101_task',
+           'run_id': None}}
+INFO 2026-10-27 22:50:52 sh/train.py:470 Logs will be saved locally.
+INFO 2026-10-27 22:50:52 sh/train.py:483 Creating dataset
+WARNING 2026-10-27 22:50:52 ts/compat.py:39 Dataset PriMeR19/SO-101-teleop is v2.1, loading with v2.1 compatibility.
+INFO 2026-10-27 22:50:52 sh/train.py:183 Creating VLASHDataset with max_delay_steps=0 (no temporal delay)
+WARNING 2026-10-27 22:50:52 ts/compat.py:39 Dataset PriMeR19/SO-101-teleop is v2.1, loading with v2.1 compatibility.
+INFO 2026-10-27 22:50:52 sh/train.py:494 Creating policy
+INFO 2026-10-27 22:51:35 ra/apply.py:171 [LoRA] Cast 414 LoRA modules to match base layer dtype
+INFO 2026-10-27 22:51:35 /logging.py:197 [LoRA] GLOBAL total_params=3772830676 trainable_params=153940128
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.embed_tokens count=1 has_lora=False requires_grad=False total_params=263323648 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.input_layernorm.dense.modules_to_save count=36 has_lora=False requires_grad=True total_params=56678400 trainable_params=56678400
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.input_layernorm.dense.original_module count=36 has_lora=False requires_grad=False total_params=56678400 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.mlp.down_proj count=18 has_lora=True requires_grad=False total_params=75497472 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.mlp.gate_proj count=18 has_lora=True requires_grad=False total_params=75497472 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.mlp.up_proj count=18 has_lora=True requires_grad=False total_params=75497472 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.post_attention_layernorm.dense.modules_to_save count=36 has_lora=False requires_grad=True total_params=56678400 trainable_params=56678400
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.post_attention_layernorm.dense.original_module count=36 has_lora=False requires_grad=False total_params=56678400 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.self_attn.k_proj count=18 has_lora=True requires_grad=False total_params=4718592 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.self_attn.o_proj count=18 has_lora=True requires_grad=False total_params=37748736 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.self_attn.q_proj count=18 has_lora=True requires_grad=False total_params=37748736 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.layers.<n>.self_attn.v_proj count=18 has_lora=True requires_grad=False total_params=4718592 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_expert.model.norm.dense count=2 has_lora=False requires_grad=False total_params=3148800 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_out_proj.modules_to_save count=2 has_lora=False requires_grad=True total_params=32800 trainable_params=32800
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.action_out_proj.original_module count=2 has_lora=False requires_grad=False total_params=32800 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.action_in_proj.modules_to_save count=2 has_lora=False requires_grad=True total_params=33792 trainable_params=33792
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.action_in_proj.original_module count=2 has_lora=False requires_grad=False total_params=33792 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_mlp_in.modules_to_save count=2 has_lora=False requires_grad=True total_params=1049600 trainable_params=1049600
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_mlp_in.original_module count=2 has_lora=False requires_grad=False total_params=1049600 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_mlp_out.modules_to_save count=2 has_lora=False requires_grad=True total_params=1049600 trainable_params=1049600
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_mlp_out.original_module count=2 has_lora=False requires_grad=False total_params=1049600 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_proj.modules_to_save count=2 has_lora=False requires_grad=True total_params=33792 trainable_params=33792
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.state_proj.original_module count=2 has_lora=False requires_grad=False total_params=33792 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.time_mlp_in.modules_to_save count=2 has_lora=False requires_grad=True total_params=1049600 trainable_params=1049600
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.time_mlp_in.original_module count=2 has_lora=False requires_grad=False total_params=1049600 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.time_mlp_out.modules_to_save count=2 has_lora=False requires_grad=True total_params=1049600 trainable_params=1049600
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.suffix_embedder.time_mlp_out.original_module count=2 has_lora=False requires_grad=False total_params=1049600 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.embed_tokens count=1 has_lora=False requires_grad=False total_params=526647296 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.input_layernorm.modules_to_save count=18 has_lora=False requires_grad=True total_params=36864 trainable_params=36864
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.input_layernorm.original_module count=18 has_lora=False requires_grad=False total_params=36864 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.mlp.down_proj count=18 has_lora=True requires_grad=False total_params=603979776 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.mlp.gate_proj count=18 has_lora=True requires_grad=False total_params=603979776 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.mlp.up_proj count=18 has_lora=True requires_grad=False total_params=603979776 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.post_attention_layernorm.modules_to_save count=18 has_lora=False requires_grad=True total_params=36864 trainable_params=36864
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.post_attention_layernorm.original_module count=18 has_lora=False requires_grad=False total_params=36864 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.self_attn.k_proj count=18 has_lora=True requires_grad=False total_params=9437184 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.self_attn.o_proj count=18 has_lora=True requires_grad=False total_params=75497472 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.self_attn.q_proj count=18 has_lora=True requires_grad=False total_params=75497472 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.layers.<n>.self_attn.v_proj count=18 has_lora=True requires_grad=False total_params=9437184 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.language_model.norm count=1 has_lora=False requires_grad=False total_params=2048 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.multi_modal_projector.linear count=2 has_lora=False requires_grad=False total_params=2361344 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.embeddings.patch_embedding.modules_to_save count=2 has_lora=False requires_grad=True total_params=678528 trainable_params=678528
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.embeddings.patch_embedding.original_module count=2 has_lora=False requires_grad=False total_params=678528 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.embeddings.position_embedding.modules_to_save count=1 has_lora=False requires_grad=True total_params=294912 trainable_params=294912
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.embeddings.position_embedding.original_module count=1 has_lora=False requires_grad=False total_params=294912 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.layer_norm1 count=54 has_lora=False requires_grad=False total_params=62208 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.layer_norm2 count=54 has_lora=False requires_grad=False total_params=62208 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.mlp.fc1 count=54 has_lora=True requires_grad=False total_params=133987824 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.mlp.fc2 count=54 has_lora=True requires_grad=False total_params=133902720 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.self_attn.k_proj count=54 has_lora=True requires_grad=False total_params=35862912 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.self_attn.out_proj count=54 has_lora=True requires_grad=False total_params=35862912 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.self_attn.q_proj count=54 has_lora=True requires_grad=False total_params=35862912 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.encoder.layers.<n>.self_attn.v_proj count=54 has_lora=True requires_grad=False total_params=35862912 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=model.vlm.model.vision_tower.vision_model.post_layernorm count=2 has_lora=False requires_grad=False total_params=2304 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=normalize_inputs.buffer_observation_state count=2 has_lora=False requires_grad=False total_params=12 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=normalize_targets.buffer_action count=2 has_lora=False requires_grad=False total_params=12 trainable_params=0
+INFO 2026-10-27 22:51:35 /logging.py:224 [LoRA] pattern=unnormalize_outputs.buffer_action count=2 has_lora=False requires_grad=False total_params=12 trainable_params=0
+INFO 2026-10-27 22:51:35 sh/train.py:508 Creating optimizer and scheduler
+INFO 2026-10-27 22:51:35 eckpoint.py:163 [LoRA] Loaded adapter weights from /opt/so101/train_smoke/primer19_bag_20261027/checkpoints/last/pretrained_model/lora_adapters: 1332 LoRA params, 125 modules_to_save params
+INFO 2026-10-27 22:51:35 sh/train.py:531 Output dir: /opt/so101/train_smoke/primer19_bag_20261027
+INFO 2026-10-27 22:51:35 sh/train.py:534 cfg.steps=21 (21)
+INFO 2026-10-27 22:51:35 sh/train.py:535 dataset.num_frames=2269 (2K)
+INFO 2026-10-27 22:51:35 sh/train.py:536 dataset.num_episodes=3
+INFO 2026-10-27 22:51:35 sh/train.py:542 Effective batch size (per optimizer step): 5 x 1 x 2 = 10
+INFO 2026-10-27 22:51:35 sh/train.py:546 num_learnable_params=153940128 (154M)
+INFO 2026-10-27 22:51:35 sh/train.py:547 num_total_params=3772830676 (4B)
+INFO 2026-10-27 22:51:36 sh/train.py:608 Start offline training on a fixed dataset
+INFO 2026-10-27 22:51:40 sh/train.py:656 step:21 smpl:210 ep:0 epch:0.09 loss:0.057 grdn:0.794 lr:2.5e-06 updt_s:2.156 data_s:1.079
+INFO 2026-10-27 22:51:42 sh/train.py:776 Policy checkpointed at step 21
+INFO 2026-10-27 22:51:42 sh/train.py:783 End of training

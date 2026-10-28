@@ -1,0 +1,7 @@
+VALID: 108 episodes, 96192 frames, 216 videos, 30 fps; train=108, val=0
+WARNING:root:Dataset PriMeR19/SO-101-teleop is v2.1, loading with v2.1 compatibility.
+LeRobot + VLASH loader: PASS (first/last training samples and both videos)
+Policy implementation: /opt/so101/vlash/vlash/policies/pi05/modeling_pi05.py
+Two-camera image masks: [[True], [True], [False]] PASS; weights were not loaded
+Training stack: /opt/so101/vlash/vlash/train.py
+READY for a 20-step smoke run. No GPU training was started.

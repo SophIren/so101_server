@@ -1,0 +1,16 @@
+{
+  "policy": {
+    "path": "/qwarium/home/m.shkut/so101_runs/primer19_bag_lora_20261027/full/train/checkpoints/last/pretrained_model",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "compile_model": false,
+    "empty_cameras": 1,
+    "n_action_steps": 32,
+    "fuse_qkv": false,
+    "fuse_gate_up": false
+  },
+  "host": "127.0.0.1",
+  "port": 50051,
+  "max_workers": 4,
+  "max_message_size": 16777216
+}

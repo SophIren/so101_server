@@ -1,0 +1,23 @@
+// Wire contract from mit-han-lab/vlash, dev/remote_inference.
+syntax = "proto3";
+package transport;
+
+service RemoteInference {
+  rpc LaunchInference(stream Observation) returns (Empty);
+  rpc GetActionChunk(Empty) returns (ActionChunk);
+  rpc Ready(Empty) returns (Empty);
+}
+
+enum TransferState {
+  TRANSFER_UNKNOWN = 0;
+  TRANSFER_BEGIN = 1;
+  TRANSFER_MIDDLE = 2;
+  TRANSFER_END = 3;
+}
+
+message Observation {
+  TransferState transfer_state = 1;
+  bytes data = 2;
+}
+message ActionChunk { bytes data = 1; }
+message Empty {}

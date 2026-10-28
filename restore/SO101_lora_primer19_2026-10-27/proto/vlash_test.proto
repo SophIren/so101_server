@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package vlash;
+
+// Local stand-in for the vlash inference contract, used only to test
+// policy_client.py's legacy reflection path end to end. The real VLASH
+// streaming contract is in vlash_transport.proto.
+
+service RemoteInference {
+  rpc Infer (InferRequest) returns (InferResponse);
+}
+
+message Image {
+  bytes data = 1;
+  int32 width = 2;
+  int32 height = 3;
+  string encoding = 4;
+}
+
+message Observation {
+  repeated float state = 1;
+  Image base_0_rgb = 2;
+  Image left_wrist_0_rgb = 3;
+  Image right_wrist_0_rgb = 4;
+}
+
+message InferRequest {
+  Observation observation = 1;
+  string prompt = 2;
+}
+
+message Action {
+  repeated float values = 1;
+}
+
+message InferResponse {
+  repeated Action actions = 1;
+}

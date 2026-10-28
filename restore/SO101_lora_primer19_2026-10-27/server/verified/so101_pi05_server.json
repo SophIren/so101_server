@@ -1,0 +1,16 @@
+{
+  "policy": {
+    "path": "/opt/so101/models/so101-pi05-base",
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "compile_model": false,
+    "empty_cameras": 1,
+    "n_action_steps": 32,
+    "fuse_qkv": true,
+    "fuse_gate_up": true
+  },
+  "host": "127.0.0.1",
+  "port": 50051,
+  "max_workers": 4,
+  "max_message_size": 16777216
+}

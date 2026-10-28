@@ -1,0 +1,1021 @@
+{
+  "source_repo": "PriMeR19/SO-101-teleop",
+  "source_revision": "b83962819ea1b10eb3c690b04d2094058fbbf244",
+  "camera_mapping": {
+    "observation.images.front": "observation.images.base_0_rgb",
+    "observation.images.wrist": "observation.images.left_wrist_0_rgb"
+  },
+  "state_source": "observation.follower.raw_position",
+  "action_source": "action.goal_sent",
+  "state_units": "five RANGE_M100_100 + gripper RANGE_0_100",
+  "follower_calibration": {
+    "shoulder_pan": {
+      "id": 1,
+      "drive_mode": 0,
+      "homing_offset": -1678,
+      "range_min": 761,
+      "range_max": 3463
+    },
+    "shoulder_lift": {
+      "id": 2,
+      "drive_mode": 0,
+      "homing_offset": -517,
+      "range_min": 868,
+      "range_max": 3208
+    },
+    "elbow_flex": {
+      "id": 3,
+      "drive_mode": 0,
+      "homing_offset": 1638,
+      "range_min": 840,
+      "range_max": 3123
+    },
+    "wrist_flex": {
+      "id": 4,
+      "drive_mode": 0,
+      "homing_offset": -947,
+      "range_min": 877,
+      "range_max": 3169
+    },
+    "wrist_roll": {
+      "id": 5,
+      "drive_mode": 0,
+      "homing_offset": -611,
+      "range_min": 0,
+      "range_max": 4095
+    },
+    "gripper": {
+      "id": 6,
+      "drive_mode": 0,
+      "homing_offset": 991,
+      "range_min": 2046,
+      "range_max": 3477
+    }
+  },
+  "frame_alignment": "original row/video frame index preserved; no resampling",
+  "image_statistics": "source RGB estimates; VISUAL uses IDENTITY normalization",
+  "episodes": [
+    {
+      "episode_index": 0,
+      "source_episode_index": 51,
+      "split": "train",
+      "frames": 773,
+      "recording_wall_seconds": 26.771048545837402,
+      "nominal_video_seconds": 25.766666666666666
+    },
+    {
+      "episode_index": 1,
+      "source_episode_index": 93,
+      "split": "train",
+      "frames": 907,
+      "recording_wall_seconds": 30.91325569152832,
+      "nominal_video_seconds": 30.233333333333334
+    },
+    {
+      "episode_index": 2,
+      "source_episode_index": 107,
+      "split": "train",
+      "frames": 589,
+      "recording_wall_seconds": 20.17421531677246,
+      "nominal_video_seconds": 19.633333333333333
+    },
+    {
+      "episode_index": 3,
+      "source_episode_index": 26,
+      "split": "train",
+      "frames": 931,
+      "recording_wall_seconds": 31.96987295150757,
+      "nominal_video_seconds": 31.033333333333335
+    },
+    {
+      "episode_index": 4,
+      "source_episode_index": 42,
+      "split": "train",
+      "frames": 770,
+      "recording_wall_seconds": 26.460702896118164,
+      "nominal_video_seconds": 25.666666666666668
+    },
+    {
+      "episode_index": 5,
+      "source_episode_index": 43,
+      "split": "train",
+      "frames": 910,
+      "recording_wall_seconds": 31.242931127548218,
+      "nominal_video_seconds": 30.333333333333332
+    },
+    {
+      "episode_index": 6,
+      "source_episode_index": 116,
+      "split": "train",
+      "frames": 941,
+      "recording_wall_seconds": 32.3334801197052,
+      "nominal_video_seconds": 31.366666666666667
+    },
+    {
+      "episode_index": 7,
+      "source_episode_index": 114,
+      "split": "train",
+      "frames": 730,
+      "recording_wall_seconds": 25.092720985412598,
+      "nominal_video_seconds": 24.333333333333332
+    },
+    {
+      "episode_index": 8,
+      "source_episode_index": 44,
+      "split": "train",
+      "frames": 1030,
+      "recording_wall_seconds": 35.2564594745636,
+      "nominal_video_seconds": 34.333333333333336
+    },
+    {
+      "episode_index": 9,
+      "source_episode_index": 78,
+      "split": "train",
+      "frames": 797,
+      "recording_wall_seconds": 27.276591300964355,
+      "nominal_video_seconds": 26.566666666666666
+    },
+    {
+      "episode_index": 10,
+      "source_episode_index": 61,
+      "split": "train",
+      "frames": 413,
+      "recording_wall_seconds": 14.265669107437134,
+      "nominal_video_seconds": 13.766666666666667
+    },
+    {
+      "episode_index": 11,
+      "source_episode_index": 83,
+      "split": "train",
+      "frames": 942,
+      "recording_wall_seconds": 32.25872564315796,
+      "nominal_video_seconds": 31.4
+    },
+    {
+      "episode_index": 12,
+      "source_episode_index": 76,
+      "split": "train",
+      "frames": 416,
+      "recording_wall_seconds": 14.235406398773193,
+      "nominal_video_seconds": 13.866666666666667
+    },
+    {
+      "episode_index": 13,
+      "source_episode_index": 65,
+      "split": "train",
+      "frames": 911,
+      "recording_wall_seconds": 31.350679397583008,
+      "nominal_video_seconds": 30.366666666666667
+    },
+    {
+      "episode_index": 14,
+      "source_episode_index": 35,
+      "split": "train",
+      "frames": 963,
+      "recording_wall_seconds": 32.99893116950989,
+      "nominal_video_seconds": 32.1
+    },
+    {
+      "episode_index": 15,
+      "source_episode_index": 47,
+      "split": "train",
+      "frames": 120,
+      "recording_wall_seconds": 4.1144232749938965,
+      "nominal_video_seconds": 4.0
+    },
+    {
+      "episode_index": 16,
+      "source_episode_index": 10,
+      "split": "train",
+      "frames": 497,
+      "recording_wall_seconds": 17.291264057159424,
+      "nominal_video_seconds": 16.566666666666666
+    },
+    {
+      "episode_index": 17,
+      "source_episode_index": 77,
+      "split": "train",
+      "frames": 896,
+      "recording_wall_seconds": 30.70993161201477,
+      "nominal_video_seconds": 29.866666666666667
+    },
+    {
+      "episode_index": 18,
+      "source_episode_index": 19,
+      "split": "train",
+      "frames": 1013,
+      "recording_wall_seconds": 34.995073080062866,
+      "nominal_video_seconds": 33.766666666666666
+    },
+    {
+      "episode_index": 19,
+      "source_episode_index": 49,
+      "split": "train",
+      "frames": 863,
+      "recording_wall_seconds": 29.35930585861206,
+      "nominal_video_seconds": 28.766666666666666
+    },
+    {
+      "episode_index": 20,
+      "source_episode_index": 119,
+      "split": "train",
+      "frames": 947,
+      "recording_wall_seconds": 32.573652505874634,
+      "nominal_video_seconds": 31.566666666666666
+    },
+    {
+      "episode_index": 21,
+      "source_episode_index": 84,
+      "split": "train",
+      "frames": 1124,
+      "recording_wall_seconds": 38.42319107055664,
+      "nominal_video_seconds": 37.46666666666667
+    },
+    {
+      "episode_index": 22,
+      "source_episode_index": 73,
+      "split": "train",
+      "frames": 939,
+      "recording_wall_seconds": 32.339871644973755,
+      "nominal_video_seconds": 31.3
+    },
+    {
+      "episode_index": 23,
+      "source_episode_index": 115,
+      "split": "train",
+      "frames": 785,
+      "recording_wall_seconds": 27.031641960144043,
+      "nominal_video_seconds": 26.166666666666668
+    },
+    {
+      "episode_index": 24,
+      "source_episode_index": 6,
+      "split": "train",
+      "frames": 1022,
+      "recording_wall_seconds": 35.09014177322388,
+      "nominal_video_seconds": 34.06666666666667
+    },
+    {
+      "episode_index": 25,
+      "source_episode_index": 52,
+      "split": "train",
+      "frames": 894,
+      "recording_wall_seconds": 30.69619607925415,
+      "nominal_video_seconds": 29.8
+    },
+    {
+      "episode_index": 26,
+      "source_episode_index": 82,
+      "split": "train",
+      "frames": 960,
+      "recording_wall_seconds": 32.77394676208496,
+      "nominal_video_seconds": 32.0
+    },
+    {
+      "episode_index": 27,
+      "source_episode_index": 34,
+      "split": "train",
+      "frames": 603,
+      "recording_wall_seconds": 20.660977602005005,
+      "nominal_video_seconds": 20.1
+    },
+    {
+      "episode_index": 28,
+      "source_episode_index": 118,
+      "split": "train",
+      "frames": 674,
+      "recording_wall_seconds": 23.368606090545654,
+      "nominal_video_seconds": 22.466666666666665
+    },
+    {
+      "episode_index": 29,
+      "source_episode_index": 95,
+      "split": "train",
+      "frames": 1034,
+      "recording_wall_seconds": 35.51858925819397,
+      "nominal_video_seconds": 34.46666666666667
+    },
+    {
+      "episode_index": 30,
+      "source_episode_index": 113,
+      "split": "train",
+      "frames": 735,
+      "recording_wall_seconds": 25.1378493309021,
+      "nominal_video_seconds": 24.5
+    },
+    {
+      "episode_index": 31,
+      "source_episode_index": 33,
+      "split": "train",
+      "frames": 876,
+      "recording_wall_seconds": 29.931262016296387,
+      "nominal_video_seconds": 29.2
+    },
+    {
+      "episode_index": 32,
+      "source_episode_index": 91,
+      "split": "train",
+      "frames": 1001,
+      "recording_wall_seconds": 34.52167773246765,
+      "nominal_video_seconds": 33.36666666666667
+    },
+    {
+      "episode_index": 33,
+      "source_episode_index": 70,
+      "split": "train",
+      "frames": 752,
+      "recording_wall_seconds": 25.996010303497314,
+      "nominal_video_seconds": 25.066666666666666
+    },
+    {
+      "episode_index": 34,
+      "source_episode_index": 72,
+      "split": "train",
+      "frames": 742,
+      "recording_wall_seconds": 25.700741291046143,
+      "nominal_video_seconds": 24.733333333333334
+    },
+    {
+      "episode_index": 35,
+      "source_episode_index": 67,
+      "split": "train",
+      "frames": 973,
+      "recording_wall_seconds": 33.39314103126526,
+      "nominal_video_seconds": 32.43333333333333
+    },
+    {
+      "episode_index": 36,
+      "source_episode_index": 80,
+      "split": "train",
+      "frames": 1092,
+      "recording_wall_seconds": 37.22279167175293,
+      "nominal_video_seconds": 36.4
+    },
+    {
+      "episode_index": 37,
+      "source_episode_index": 112,
+      "split": "train",
+      "frames": 748,
+      "recording_wall_seconds": 25.855868816375732,
+      "nominal_video_seconds": 24.933333333333334
+    },
+    {
+      "episode_index": 38,
+      "source_episode_index": 88,
+      "split": "train",
+      "frames": 1101,
+      "recording_wall_seconds": 37.94637489318848,
+      "nominal_video_seconds": 36.7
+    },
+    {
+      "episode_index": 39,
+      "source_episode_index": 1,
+      "split": "train",
+      "frames": 1435,
+      "recording_wall_seconds": 48.94191765785217,
+      "nominal_video_seconds": 47.833333333333336
+    },
+    {
+      "episode_index": 40,
+      "source_episode_index": 56,
+      "split": "train",
+      "frames": 821,
+      "recording_wall_seconds": 28.354296684265137,
+      "nominal_video_seconds": 27.366666666666667
+    },
+    {
+      "episode_index": 41,
+      "source_episode_index": 14,
+      "split": "train",
+      "frames": 978,
+      "recording_wall_seconds": 33.77694129943848,
+      "nominal_video_seconds": 32.6
+    },
+    {
+      "episode_index": 42,
+      "source_episode_index": 4,
+      "split": "train",
+      "frames": 1201,
+      "recording_wall_seconds": 41.090757608413696,
+      "nominal_video_seconds": 40.03333333333333
+    },
+    {
+      "episode_index": 43,
+      "source_episode_index": 41,
+      "split": "train",
+      "frames": 864,
+      "recording_wall_seconds": 29.703590393066406,
+      "nominal_video_seconds": 28.8
+    },
+    {
+      "episode_index": 44,
+      "source_episode_index": 106,
+      "split": "train",
+      "frames": 863,
+      "recording_wall_seconds": 29.608668088912964,
+      "nominal_video_seconds": 28.766666666666666
+    },
+    {
+      "episode_index": 45,
+      "source_episode_index": 9,
+      "split": "train",
+      "frames": 1070,
+      "recording_wall_seconds": 36.95562529563904,
+      "nominal_video_seconds": 35.666666666666664
+    },
+    {
+      "episode_index": 46,
+      "source_episode_index": 3,
+      "split": "train",
+      "frames": 1152,
+      "recording_wall_seconds": 39.88781380653381,
+      "nominal_video_seconds": 38.4
+    },
+    {
+      "episode_index": 47,
+      "source_episode_index": 75,
+      "split": "train",
+      "frames": 747,
+      "recording_wall_seconds": 25.691787719726562,
+      "nominal_video_seconds": 24.9
+    },
+    {
+      "episode_index": 48,
+      "source_episode_index": 110,
+      "split": "train",
+      "frames": 907,
+      "recording_wall_seconds": 31.34609055519104,
+      "nominal_video_seconds": 30.233333333333334
+    },
+    {
+      "episode_index": 49,
+      "source_episode_index": 104,
+      "split": "train",
+      "frames": 800,
+      "recording_wall_seconds": 27.29925560951233,
+      "nominal_video_seconds": 26.666666666666668
+    },
+    {
+      "episode_index": 50,
+      "source_episode_index": 17,
+      "split": "train",
+      "frames": 1018,
+      "recording_wall_seconds": 35.61123180389404,
+      "nominal_video_seconds": 33.93333333333333
+    },
+    {
+      "episode_index": 51,
+      "source_episode_index": 38,
+      "split": "train",
+      "frames": 892,
+      "recording_wall_seconds": 30.584885835647583,
+      "nominal_video_seconds": 29.733333333333334
+    },
+    {
+      "episode_index": 52,
+      "source_episode_index": 60,
+      "split": "train",
+      "frames": 698,
+      "recording_wall_seconds": 23.920851230621338,
+      "nominal_video_seconds": 23.266666666666666
+    },
+    {
+      "episode_index": 53,
+      "source_episode_index": 94,
+      "split": "train",
+      "frames": 998,
+      "recording_wall_seconds": 34.222705125808716,
+      "nominal_video_seconds": 33.266666666666666
+    },
+    {
+      "episode_index": 54,
+      "source_episode_index": 63,
+      "split": "train",
+      "frames": 741,
+      "recording_wall_seconds": 25.431576251983643,
+      "nominal_video_seconds": 24.7
+    },
+    {
+      "episode_index": 55,
+      "source_episode_index": 98,
+      "split": "train",
+      "frames": 943,
+      "recording_wall_seconds": 32.612096548080444,
+      "nominal_video_seconds": 31.433333333333334
+    },
+    {
+      "episode_index": 56,
+      "source_episode_index": 90,
+      "split": "train",
+      "frames": 1055,
+      "recording_wall_seconds": 36.587239503860474,
+      "nominal_video_seconds": 35.166666666666664
+    },
+    {
+      "episode_index": 57,
+      "source_episode_index": 7,
+      "split": "train",
+      "frames": 1138,
+      "recording_wall_seconds": 39.11254048347473,
+      "nominal_video_seconds": 37.93333333333333
+    },
+    {
+      "episode_index": 58,
+      "source_episode_index": 108,
+      "split": "train",
+      "frames": 771,
+      "recording_wall_seconds": 26.496808767318726,
+      "nominal_video_seconds": 25.7
+    },
+    {
+      "episode_index": 59,
+      "source_episode_index": 57,
+      "split": "train",
+      "frames": 941,
+      "recording_wall_seconds": 32.26849627494812,
+      "nominal_video_seconds": 31.366666666666667
+    },
+    {
+      "episode_index": 60,
+      "source_episode_index": 31,
+      "split": "train",
+      "frames": 854,
+      "recording_wall_seconds": 29.41437554359436,
+      "nominal_video_seconds": 28.466666666666665
+    },
+    {
+      "episode_index": 61,
+      "source_episode_index": 39,
+      "split": "train",
+      "frames": 986,
+      "recording_wall_seconds": 33.562416076660156,
+      "nominal_video_seconds": 32.86666666666667
+    },
+    {
+      "episode_index": 62,
+      "source_episode_index": 81,
+      "split": "train",
+      "frames": 1051,
+      "recording_wall_seconds": 35.94947338104248,
+      "nominal_video_seconds": 35.03333333333333
+    },
+    {
+      "episode_index": 63,
+      "source_episode_index": 64,
+      "split": "train",
+      "frames": 1004,
+      "recording_wall_seconds": 34.36781644821167,
+      "nominal_video_seconds": 33.46666666666667
+    },
+    {
+      "episode_index": 64,
+      "source_episode_index": 96,
+      "split": "train",
+      "frames": 956,
+      "recording_wall_seconds": 32.70372939109802,
+      "nominal_video_seconds": 31.866666666666667
+    },
+    {
+      "episode_index": 65,
+      "source_episode_index": 74,
+      "split": "train",
+      "frames": 914,
+      "recording_wall_seconds": 31.284553050994873,
+      "nominal_video_seconds": 30.466666666666665
+    },
+    {
+      "episode_index": 66,
+      "source_episode_index": 48,
+      "split": "train",
+      "frames": 801,
+      "recording_wall_seconds": 27.5153329372406,
+      "nominal_video_seconds": 26.7
+    },
+    {
+      "episode_index": 67,
+      "source_episode_index": 71,
+      "split": "train",
+      "frames": 760,
+      "recording_wall_seconds": 26.21166467666626,
+      "nominal_video_seconds": 25.333333333333332
+    },
+    {
+      "episode_index": 68,
+      "source_episode_index": 24,
+      "split": "train",
+      "frames": 1024,
+      "recording_wall_seconds": 35.35641312599182,
+      "nominal_video_seconds": 34.13333333333333
+    },
+    {
+      "episode_index": 69,
+      "source_episode_index": 15,
+      "split": "train",
+      "frames": 770,
+      "recording_wall_seconds": 26.496849298477173,
+      "nominal_video_seconds": 25.666666666666668
+    },
+    {
+      "episode_index": 70,
+      "source_episode_index": 66,
+      "split": "train",
+      "frames": 880,
+      "recording_wall_seconds": 30.106213092803955,
+      "nominal_video_seconds": 29.333333333333332
+    },
+    {
+      "episode_index": 71,
+      "source_episode_index": 37,
+      "split": "train",
+      "frames": 823,
+      "recording_wall_seconds": 28.321240186691284,
+      "nominal_video_seconds": 27.433333333333334
+    },
+    {
+      "episode_index": 72,
+      "source_episode_index": 79,
+      "split": "train",
+      "frames": 782,
+      "recording_wall_seconds": 26.85798692703247,
+      "nominal_video_seconds": 26.066666666666666
+    },
+    {
+      "episode_index": 73,
+      "source_episode_index": 92,
+      "split": "train",
+      "frames": 928,
+      "recording_wall_seconds": 31.92762303352356,
+      "nominal_video_seconds": 30.933333333333334
+    },
+    {
+      "episode_index": 74,
+      "source_episode_index": 40,
+      "split": "train",
+      "frames": 778,
+      "recording_wall_seconds": 26.901273727416992,
+      "nominal_video_seconds": 25.933333333333334
+    },
+    {
+      "episode_index": 75,
+      "source_episode_index": 0,
+      "split": "train",
+      "frames": 1189,
+      "recording_wall_seconds": 40.750229597091675,
+      "nominal_video_seconds": 39.63333333333333
+    },
+    {
+      "episode_index": 76,
+      "source_episode_index": 11,
+      "split": "train",
+      "frames": 940,
+      "recording_wall_seconds": 32.28633165359497,
+      "nominal_video_seconds": 31.333333333333332
+    },
+    {
+      "episode_index": 77,
+      "source_episode_index": 36,
+      "split": "train",
+      "frames": 962,
+      "recording_wall_seconds": 33.027769804000854,
+      "nominal_video_seconds": 32.06666666666667
+    },
+    {
+      "episode_index": 78,
+      "source_episode_index": 20,
+      "split": "train",
+      "frames": 927,
+      "recording_wall_seconds": 32.14532136917114,
+      "nominal_video_seconds": 30.9
+    },
+    {
+      "episode_index": 79,
+      "source_episode_index": 32,
+      "split": "train",
+      "frames": 910,
+      "recording_wall_seconds": 31.000542402267456,
+      "nominal_video_seconds": 30.333333333333332
+    },
+    {
+      "episode_index": 80,
+      "source_episode_index": 13,
+      "split": "train",
+      "frames": 1039,
+      "recording_wall_seconds": 36.04681944847107,
+      "nominal_video_seconds": 34.63333333333333
+    },
+    {
+      "episode_index": 81,
+      "source_episode_index": 22,
+      "split": "train",
+      "frames": 901,
+      "recording_wall_seconds": 30.7781925201416,
+      "nominal_video_seconds": 30.033333333333335
+    },
+    {
+      "episode_index": 82,
+      "source_episode_index": 69,
+      "split": "train",
+      "frames": 853,
+      "recording_wall_seconds": 29.287829399108887,
+      "nominal_video_seconds": 28.433333333333334
+    },
+    {
+      "episode_index": 83,
+      "source_episode_index": 27,
+      "split": "train",
+      "frames": 1031,
+      "recording_wall_seconds": 35.318252086639404,
+      "nominal_video_seconds": 34.36666666666667
+    },
+    {
+      "episode_index": 84,
+      "source_episode_index": 89,
+      "split": "train",
+      "frames": 867,
+      "recording_wall_seconds": 29.71262526512146,
+      "nominal_video_seconds": 28.9
+    },
+    {
+      "episode_index": 85,
+      "source_episode_index": 109,
+      "split": "train",
+      "frames": 800,
+      "recording_wall_seconds": 27.41663694381714,
+      "nominal_video_seconds": 26.666666666666668
+    },
+    {
+      "episode_index": 86,
+      "source_episode_index": 2,
+      "split": "train",
+      "frames": 1099,
+      "recording_wall_seconds": 37.75161695480347,
+      "nominal_video_seconds": 36.63333333333333
+    },
+    {
+      "episode_index": 87,
+      "source_episode_index": 100,
+      "split": "train",
+      "frames": 738,
+      "recording_wall_seconds": 25.311526775360107,
+      "nominal_video_seconds": 24.6
+    },
+    {
+      "episode_index": 88,
+      "source_episode_index": 53,
+      "split": "train",
+      "frames": 859,
+      "recording_wall_seconds": 29.49923872947693,
+      "nominal_video_seconds": 28.633333333333333
+    },
+    {
+      "episode_index": 89,
+      "source_episode_index": 111,
+      "split": "train",
+      "frames": 858,
+      "recording_wall_seconds": 29.629459142684937,
+      "nominal_video_seconds": 28.6
+    },
+    {
+      "episode_index": 90,
+      "source_episode_index": 18,
+      "split": "train",
+      "frames": 1205,
+      "recording_wall_seconds": 41.91775703430176,
+      "nominal_video_seconds": 40.166666666666664
+    },
+    {
+      "episode_index": 91,
+      "source_episode_index": 101,
+      "split": "train",
+      "frames": 778,
+      "recording_wall_seconds": 26.484987497329712,
+      "nominal_video_seconds": 25.933333333333334
+    },
+    {
+      "episode_index": 92,
+      "source_episode_index": 102,
+      "split": "train",
+      "frames": 743,
+      "recording_wall_seconds": 25.590129137039185,
+      "nominal_video_seconds": 24.766666666666666
+    },
+    {
+      "episode_index": 93,
+      "source_episode_index": 5,
+      "split": "train",
+      "frames": 1078,
+      "recording_wall_seconds": 37.145516872406006,
+      "nominal_video_seconds": 35.93333333333333
+    },
+    {
+      "episode_index": 94,
+      "source_episode_index": 23,
+      "split": "train",
+      "frames": 893,
+      "recording_wall_seconds": 30.62105369567871,
+      "nominal_video_seconds": 29.766666666666666
+    },
+    {
+      "episode_index": 95,
+      "source_episode_index": 58,
+      "split": "train",
+      "frames": 897,
+      "recording_wall_seconds": 30.985897541046143,
+      "nominal_video_seconds": 29.9
+    },
+    {
+      "episode_index": 96,
+      "source_episode_index": 29,
+      "split": "train",
+      "frames": 990,
+      "recording_wall_seconds": 34.00747275352478,
+      "nominal_video_seconds": 33.0
+    },
+    {
+      "episode_index": 97,
+      "source_episode_index": 103,
+      "split": "train",
+      "frames": 929,
+      "recording_wall_seconds": 31.857486486434937,
+      "nominal_video_seconds": 30.966666666666665
+    },
+    {
+      "episode_index": 98,
+      "source_episode_index": 105,
+      "split": "train",
+      "frames": 940,
+      "recording_wall_seconds": 32.44779920578003,
+      "nominal_video_seconds": 31.333333333333332
+    },
+    {
+      "episode_index": 99,
+      "source_episode_index": 87,
+      "split": "train",
+      "frames": 952,
+      "recording_wall_seconds": 32.67478108406067,
+      "nominal_video_seconds": 31.733333333333334
+    },
+    {
+      "episode_index": 100,
+      "source_episode_index": 25,
+      "split": "train",
+      "frames": 1070,
+      "recording_wall_seconds": 36.47958946228027,
+      "nominal_video_seconds": 35.666666666666664
+    },
+    {
+      "episode_index": 101,
+      "source_episode_index": 62,
+      "split": "train",
+      "frames": 1000,
+      "recording_wall_seconds": 34.23492693901062,
+      "nominal_video_seconds": 33.333333333333336
+    },
+    {
+      "episode_index": 102,
+      "source_episode_index": 86,
+      "split": "train",
+      "frames": 490,
+      "recording_wall_seconds": 16.831164121627808,
+      "nominal_video_seconds": 16.333333333333332
+    },
+    {
+      "episode_index": 103,
+      "source_episode_index": 46,
+      "split": "train",
+      "frames": 785,
+      "recording_wall_seconds": 26.96715497970581,
+      "nominal_video_seconds": 26.166666666666668
+    },
+    {
+      "episode_index": 104,
+      "source_episode_index": 30,
+      "split": "train",
+      "frames": 1180,
+      "recording_wall_seconds": 40.21654033660889,
+      "nominal_video_seconds": 39.333333333333336
+    },
+    {
+      "episode_index": 105,
+      "source_episode_index": 117,
+      "split": "train",
+      "frames": 827,
+      "recording_wall_seconds": 28.16714882850647,
+      "nominal_video_seconds": 27.566666666666666
+    },
+    {
+      "episode_index": 106,
+      "source_episode_index": 28,
+      "split": "train",
+      "frames": 828,
+      "recording_wall_seconds": 28.331323623657227,
+      "nominal_video_seconds": 27.6
+    },
+    {
+      "episode_index": 107,
+      "source_episode_index": 16,
+      "split": "train",
+      "frames": 876,
+      "recording_wall_seconds": 30.376633882522583,
+      "nominal_video_seconds": 29.2
+    },
+    {
+      "episode_index": 108,
+      "source_episode_index": 55,
+      "split": "val",
+      "frames": 713,
+      "recording_wall_seconds": 24.776724338531494,
+      "nominal_video_seconds": 23.766666666666666
+    },
+    {
+      "episode_index": 109,
+      "source_episode_index": 68,
+      "split": "val",
+      "frames": 857,
+      "recording_wall_seconds": 29.485785007476807,
+      "nominal_video_seconds": 28.566666666666666
+    },
+    {
+      "episode_index": 110,
+      "source_episode_index": 21,
+      "split": "val",
+      "frames": 1223,
+      "recording_wall_seconds": 41.553582429885864,
+      "nominal_video_seconds": 40.766666666666666
+    },
+    {
+      "episode_index": 111,
+      "source_episode_index": 59,
+      "split": "val",
+      "frames": 859,
+      "recording_wall_seconds": 29.267755270004272,
+      "nominal_video_seconds": 28.633333333333333
+    },
+    {
+      "episode_index": 112,
+      "source_episode_index": 8,
+      "split": "val",
+      "frames": 1083,
+      "recording_wall_seconds": 37.277787923812866,
+      "nominal_video_seconds": 36.1
+    },
+    {
+      "episode_index": 113,
+      "source_episode_index": 45,
+      "split": "val",
+      "frames": 918,
+      "recording_wall_seconds": 31.35286521911621,
+      "nominal_video_seconds": 30.6
+    },
+    {
+      "episode_index": 114,
+      "source_episode_index": 50,
+      "split": "val",
+      "frames": 867,
+      "recording_wall_seconds": 29.62777876853943,
+      "nominal_video_seconds": 28.9
+    },
+    {
+      "episode_index": 115,
+      "source_episode_index": 12,
+      "split": "val",
+      "frames": 911,
+      "recording_wall_seconds": 31.849347591400146,
+      "nominal_video_seconds": 30.366666666666667
+    },
+    {
+      "episode_index": 116,
+      "source_episode_index": 97,
+      "split": "val",
+      "frames": 1081,
+      "recording_wall_seconds": 37.11385250091553,
+      "nominal_video_seconds": 36.03333333333333
+    },
+    {
+      "episode_index": 117,
+      "source_episode_index": 85,
+      "split": "val",
+      "frames": 926,
+      "recording_wall_seconds": 31.815176725387573,
+      "nominal_video_seconds": 30.866666666666667
+    },
+    {
+      "episode_index": 118,
+      "source_episode_index": 54,
+      "split": "val",
+      "frames": 911,
+      "recording_wall_seconds": 31.221728563308716,
+      "nominal_video_seconds": 30.366666666666667
+    },
+    {
+      "episode_index": 119,
+      "source_episode_index": 99,
+      "split": "val",
+      "frames": 229,
+      "recording_wall_seconds": 7.804571151733398,
+      "nominal_video_seconds": 7.633333333333334
+    }
+  ],
+  "train_frames": 96192,
+  "val_frames": 10578
+}

@@ -1,0 +1,73 @@
+{
+  "robot_type": "so101_follower",
+  "serial_port": "/dev/so101_follower",
+  "baudrate": 1000000,
+  "joint_calibration": "so101_follower_calibration.json",
+  "camera": {
+    "device": "/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB2.0_CAM1_USB2.0_CAM1-video-index0",
+    "intrinsics": "camera/calibration/camera_intrinsics.json",
+    "calibrated_size": [
+      1280,
+      720
+    ],
+    "preview_size": [
+      640,
+      480
+    ],
+    "preview_fps": 15,
+    "rectified_display_intrinsics": "camera/calibration/rectified_view.json",
+    "full_frame_distortion_status": "expanded_field_checked_no_folds",
+    "calibration_version": "20261020_182057"
+  },
+  "motion": {
+    "step_ticks": 4,
+    "step_interval_s": 0.1,
+    "position_tolerance_ticks": 25,
+    "abort_tracking_error_ticks": 45,
+    "abort_temperature_C": 45,
+    "temperature_confirmations": 3,
+    "confirm_interval_s": 0.02,
+    "abort_load_raw": 850,
+    "voltage_raw_range": [
+      105,
+      135
+    ]
+  },
+  "gripper_protection": {
+    "max_torque_limit": 500,
+    "protection_current": 250,
+    "overload_torque": 25
+  },
+  "kinematics": {
+    "file": "robot_setup/so101_kinematics.urdf",
+    "status": "software_zero_corrections_locally_validated",
+    "angle_mapping": "sign * (encoder - (range_min + range_max)/2) * 2*pi/4096 + zero_correction_rad",
+    "hardware_offsets_modified": false
+  },
+  "handeye": {
+    "status": "independently_validated_locally",
+    "transform": "robot_setup/handeye_transform.json",
+    "camera_frame": "OpenCV optical frame",
+    "gripper_frame": "gripper_frame_link",
+    "base_frame": "base_link",
+    "translation_units": "metres",
+    "independent_projection_rms_px": 0.8871748990616644,
+    "independent_board_translation_rms_mm": 2.7167779112413375,
+    "scope": "Near sampled poses; wider workspace needs independent validation",
+    "intrinsics_calibration_version": "20261020_182057"
+  },
+  "usb_access": {
+    "persistent_rule_installed": false,
+    "prepared_rule": "robot_setup/99-so101.rules",
+    "status": "install_on_destination_computer",
+    "user_approval": true,
+    "verified_link": "/dev/so101_follower",
+    "user_access_verified": false
+  },
+  "export": {
+    "created": "2026-10-20",
+    "target_os": "Linux with udev/V4L2",
+    "device_identity": "Same SO-101 and same camera, rigid mount unchanged",
+    "source_setup_verified": true
+  }
+}

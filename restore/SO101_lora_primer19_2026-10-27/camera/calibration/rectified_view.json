@@ -1,0 +1,41 @@
+{
+  "image_size": [
+    1280,
+    720
+  ],
+  "source_intrinsics": "camera_intrinsics.json",
+  "calibration_version": "20261020_182057",
+  "camera_matrix": [
+    [
+      513.9215084838867,
+      0.0,
+      706.8860532744293
+    ],
+    [
+      0.0,
+      529.8154019165039,
+      360.2500451181113
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_coefficients": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rendering": "expanded_field_corrected_view",
+  "minimum_map_jacobian": 0.7667354941368103,
+  "source_map_bounds": [
+    6.572524070739746,
+    1.7535638809204102,
+    1277.6092529296875,
+    718.264892578125
+  ],
+  "note": "Output intrinsics describe corrected displayed pixels. Use raw camera_intrinsics.json with raw image points."
+}

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "dataset": "robot_setup/handeye_validation/recalibrated_20261020_182057",
+  "views": [
+    {
+      "label": "initial",
+      "rms_px": 0.723065000977205,
+      "used_for_fit": false
+    },
+    {
+      "label": "unseen_combination_0",
+      "rms_px": 0.8050026442256328,
+      "used_for_fit": false
+    },
+    {
+      "label": "validation_baseline_0",
+      "rms_px": 0.576512726595155,
+      "used_for_fit": false
+    },
+    {
+      "label": "unseen_combination_1",
+      "rms_px": 0.5570910653667276,
+      "used_for_fit": false
+    },
+    {
+      "label": "validation_baseline_1",
+      "rms_px": 1.0272934604861952,
+      "used_for_fit": false
+    },
+    {
+      "label": "unseen_combination_2",
+      "rms_px": 0.8997134629678627,
+      "used_for_fit": false
+    },
+    {
+      "label": "validation_baseline_2",
+      "rms_px": 1.353207046015558,
+      "used_for_fit": false
+    }
+  ],
+  "projection_rms_px": 0.8871748990616644,
+  "fixed_board_pose_error": {
+    "translation_rms_mm": 2.7167779112413375,
+    "rotation_rms_deg": 0.1704682057753481,
+    "translation_max_mm": 4.406525695673378
+  },
+  "candidate_was_refitted": false,
+  "scope": "Independent local-pose validation against a fixed board, not external absolute metrology."
+}

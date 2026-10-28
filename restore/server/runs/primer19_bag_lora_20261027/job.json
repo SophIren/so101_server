@@ -1,0 +1,7 @@
+{
+  "pid": 37148,
+  "starttime": "401660098",
+  "config": "/qwarium/home/m.shkut/so101_runs/primer19_bag_lora_20261027/full/lora.json",
+  "output_dir": "/qwarium/home/m.shkut/so101_runs/primer19_bag_lora_20261027/full/train",
+  "log": "/qwarium/home/m.shkut/so101_runs/primer19_bag_lora_20261027/full/train.log"
+}

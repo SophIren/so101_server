@@ -1,0 +1,3 @@
+# Install together with requirements.txt; no local GPU/LeRobot is required.
+pyarrow>=17,<25
+imageio-ffmpeg>=0.5,<1

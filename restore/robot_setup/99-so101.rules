@@ -1,0 +1,2 @@
+# SO-101 controller: access for the active local desktop session.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", ATTRS{serial}=="5B8E114736", GROUP="dialout", MODE="0660", TAG+="uaccess", SYMLINK+="so101_follower"

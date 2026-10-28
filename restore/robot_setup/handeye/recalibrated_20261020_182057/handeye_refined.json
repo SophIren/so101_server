@@ -1,0 +1,115 @@
+{
+  "status": "locally_validated",
+  "dataset": "robot_setup/handeye/recalibrated_20261020_182057",
+  "views": 26,
+  "training_indices": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25
+  ],
+  "held_out_indices": [
+    3,
+    8,
+    13,
+    18,
+    23
+  ],
+  "training_projection_rms_px": 0.611540579446542,
+  "held_out_projection_rms_px": 0.7065552708165046,
+  "held_out_fixed_board_error": {
+    "translation_rms_mm": 2.679698332775336,
+    "rotation_rms_deg": 0.1294251733558561,
+    "translation_max_mm": 3.7875685522440286
+  },
+  "zero_corrections_rad": {
+    "shoulder_lift": -0.3046950763834932,
+    "elbow_flex": 0.27722657915210663,
+    "wrist_flex": -0.1477986309812063
+  },
+  "zero_corrections_deg": {
+    "shoulder_lift": -17.457741915190404,
+    "elbow_flex": 15.883912954265167,
+    "wrist_flex": -8.468237773034614
+  },
+  "T_gripper_camera": [
+    [
+      -0.9989274095422119,
+      -0.033436835938249226,
+      -0.032031366934998105,
+      0.014183420428552678
+    ],
+    [
+      0.045560862607948435,
+      -0.8331863223796342,
+      -0.5511122934556257,
+      0.03207842465162195
+    ],
+    [
+      -0.008260645477535663,
+      -0.5519805523765658,
+      0.8338160657689174,
+      -0.05919160804715338
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_base_board": [
+    [
+      -0.03431337828304801,
+      -0.9992921915892025,
+      -0.01541777868740013,
+      0.3159691049582958
+    ],
+    [
+      -0.03634615844675848,
+      -0.014168912214224533,
+      0.9992388096410334,
+      1.2569625677832437
+    ],
+    [
+      -0.998749993159934,
+      0.03484763629738469,
+      -0.03583424908544372,
+      0.3490754144073044
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "joint_signs": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "optimizer_success": true,
+  "offset_bound_reached": false,
+  "hardware_offsets_modified": false,
+  "scope": "Valid only near sampled poses, conditioned on supplied URDF and rigid mounts; no independent external length metrology."
+}

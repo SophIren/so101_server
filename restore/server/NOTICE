@@ -1,0 +1,26 @@
+Restored SO101 remote inference stack, 2026-10-27.
+
+Author package: https://github.com/jinnymo/so101-pi05-base
+Revision: 73167f4dba88633aeec95ba7a3b3881916fa9aaa
+Apache-2.0; retain so101-pi05-base/LICENSE and training-docker/NOTICE.
+
+VLASH training/model runtime: https://github.com/mit-han-lab/vlash
+Revision: 22cbabfee0f57874987c75a35a7dac129e695db0
+Remote serve/config/transport backport: revision 093d70b1fecff37b868fd124a6ae8b5691df2a39
+Copyright 2025 VLASH team; Apache-2.0; retain vlash/LICENSE.
+
+Local changes to backport: loopback host configuration; deadline-aware result
+wait; finite Nx6 output validation and CPU wire tensors; base/LoRA loader with
+saved-base selection and strict normalization checks; CLI serve dispatch.
+The service protocol is unchanged. One client at a time; no request identifiers.
+
+Training additions, 2026-10-27: enable_training_resume.py adds opt-in local LoRA
+optimizer/scheduler/RNG saves and retains only the most recent optimizer state.
+It also restores the original base path before loading an adapter-only training
+checkpoint, and fails if resume adapter weights were not restored.
+PriMeR19 preparation converts recorded degrees/raw encoder values into the
+client's calibrated SO101 units, maps RGB camera slots, and physically isolates
+train/validation because the installed LeRobot loader reads all local files.
+
+Model weights and tokenizer retain the upstream Gemma terms. They are downloaded
+separately and are not included in source backups.

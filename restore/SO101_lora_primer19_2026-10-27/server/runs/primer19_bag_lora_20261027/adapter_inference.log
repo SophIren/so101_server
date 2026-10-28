@@ -1,0 +1,21 @@
+WARNING:root:Dataset PriMeR19/SO-101-teleop is v2.1, loading with v2.1 compatibility.
+{
+  "checkpoint": "/opt/so101/train_smoke/primer19_bag_20261027/checkpoints/000021/pretrained_model",
+  "task": "pick_place_bag",
+  "actions_shape": [
+    1,
+    32,
+    6
+  ],
+  "all_finite": true,
+  "first_action": [
+    22.215425491333008,
+    -53.831947326660156,
+    73.97698974609375,
+    -18.284114837646484,
+    -45.821815490722656,
+    10.738386154174805
+  ],
+  "hardware_accessed": false
+}
+TRAINED_ADAPTER_INFERENCE_PASS

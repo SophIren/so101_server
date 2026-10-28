@@ -1,0 +1,91 @@
+{
+  "status": "expanded_field_checked",
+  "image_size": [
+    1280,
+    720
+  ],
+  "inner_corners": [
+    8,
+    13
+  ],
+  "square_size_m": 0.04,
+  "views": 44,
+  "rms_reprojection_px": 0.19756874040305,
+  "camera_matrix": [
+    [
+      523.7869688264162,
+      0.0,
+      708.3097243444872
+    ],
+    [
+      0.0,
+      519.4789458655899,
+      360.1969498263582
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_coefficients": [
+    0.08058324674244842,
+    -0.11478301400736415,
+    0.0007484060959485401,
+    -0.002123130219824325,
+    0.031440312589349914
+  ],
+  "model": "k1_k2_k3",
+  "validation": {
+    "held_out_rms_px": 0.3857236367976055,
+    "held_out_views": [
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_02.jpg",
+        "rms_px": 0.20516611635684967
+      },
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_07.jpg",
+        "rms_px": 0.1795526146888733
+      },
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_13.jpg",
+        "rms_px": 0.8337228298187256
+      },
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_21.jpg",
+        "rms_px": 0.17627473175525665
+      },
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_46.jpg",
+        "rms_px": 0.1408383548259735
+      },
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_54.jpg",
+        "rms_px": 0.2690020203590393
+      }
+    ],
+    "independent_control_views": [
+      {
+        "file": "camera/calibration/peripheral_20261020_181637/view_60.jpg",
+        "rms_px": 0.22876815497875214
+      },
+      {
+        "file": "camera/validation/20261020_173646.json",
+        "rms_px": 0.20880156755447388
+      },
+      {
+        "file": "camera/validation/20261020_173751.json",
+        "rms_px": 0.24212804436683655
+      },
+      {
+        "file": "camera/validation/20261020_173947.json",
+        "rms_px": 0.21117673814296722
+      }
+    ]
+  },
+  "full_map_minimum_jacobian": 0.7673965096473694,
+  "full_map_folded_pixels": 0,
+  "calibration_source": "camera/recalibration/20261020_182057/model_comparison.json",
+  "calibration_version": "20261020_182057",
+  "scope": "Expanded sampled periphery; full output mapping checked for folds. Accuracy remains limited by sampled board coverage."
+}

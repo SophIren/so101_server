@@ -1,0 +1,13 @@
+{
+  "file": "20261020_163829.jpg",
+  "pattern_inner_corners": [
+    8,
+    13
+  ],
+  "square_size_m": 0.04,
+  "image_size": [
+    1280,
+    720
+  ],
+  "corners_found": false
+}

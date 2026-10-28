@@ -1,0 +1,35 @@
+{
+  "controller_serials": {
+    "leader": "5B79016829",
+    "follower": "5B8E114736"
+  },
+  "joint_ids": {
+    "shoulder_pan": 1,
+    "shoulder_lift": 2,
+    "elbow_flex": 3,
+    "wrist_flex": 4,
+    "wrist_roll": 5,
+    "gripper": 6
+  },
+  "baudrate": 1000000,
+  "model": 777,
+  "operating_mode": 0,
+  "offset_sign_bit": 11,
+  "follower_gripper_eeprom": {
+    "16_Max_Torque_Limit": 500,
+    "28_Protection_Current": 250,
+    "36_Overload_Torque": 25
+  },
+  "teleop_runtime_registers": {
+    "41_Acceleration": 5,
+    "44_Goal_Time": 0,
+    "46_Goal_Speed_alignment": 65,
+    "46_Goal_Speed_full_range_default": 400,
+    "48_Gripper_Torque_Limit_maximum": 200
+  },
+  "notes": [
+    "EEPROM parameters remain on the same physical motors. JSON files are records; not automatic register restore programs.",
+    "Homing offsets and range limits are in the respective calibration JSON files.",
+    "Leader range limits are software calibration data; follower EEPROM limits are checked before running."
+  ]
+}

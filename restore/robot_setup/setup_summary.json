@@ -1,0 +1,19 @@
+{
+  "servo_calibration_verified": true,
+  "gripper_protection_verified": true,
+  "camera_intrinsics_verified": true,
+  "handeye_independently_validated_locally": true,
+  "all_torque_disabled_verified": true,
+  "persistent_usb_rule_installed": false,
+  "blocked_action": null,
+  "limits": "Hand-eye accuracy is relative to a fixed board near tested poses, not external absolute workspace metrology.",
+  "persistent_usb_access_verified": false,
+  "source_computer_usb_rule_verified": true,
+  "destination_requires_usb_rule_installation": true,
+  "camera_intrinsics_version": "20261020_182057",
+  "camera_full_map_has_folds": false,
+  "new_peripheral_valid_frames": 46,
+  "camera_held_out_rms_px": 0.3857236367976055,
+  "handeye_independent_projection_rms_px": 0.8871748990616644,
+  "handeye_independent_translation_rms_mm": 2.7167779112413375
+}
